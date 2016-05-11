@@ -13,8 +13,8 @@
 @intro-img: '../img/intro-bg.jpg';
 
 @bfade-blk: rgba(0, 0, 0, 1);
-@bfade-clr: rgba(0, 0, 0, .5);
-@bfade-fallback: rgba(0, 0, 0, .5);
+@bfade-clr: rgba(0, 0, 0, .75);
+@bfade-fallback: rgba(0, 0, 0, .75);
 
 // Everything else
 
@@ -179,10 +179,81 @@ a {
         .intro-text {
             font-size: 18px;
         }
+        .learnmore {
+            color: white;
+            border: 2px solid white;
+            margin-top: 10px;
+            border-radius: 5px;
+            text-transform: none;
+        }
+    }
+    #mailchimpery {
+        font-family: @font-mono;
+        
+        input {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            width: 80%;
+            text-transform: none;
+            cursor: auto;
+            height: 100%;
+            border-radius: 5px;
+            border: 2px solid #fff;
+            background: rgba(255, 255, 255, .5);
+            -webkit-transition: background .3s ease-in-out;
+            -moz-transition: background .3s ease-in-out;
+            transition: background .3s ease-in-out;
+            &:hover,
+            &:focus {
+                outline: none;
+                color: white;
+                background: fade(white, 10%);
+            }
+            
+            &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+                color:    black;
+            }
+            &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+               color:    black;
+               opacity:  1;
+            }
+            &::-moz-placeholder { /* Mozilla Firefox 19+ */
+               color:    black;
+               opacity:  1;
+            }
+            &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+               color:    black;
+            }
+            
+            @media(min-width:768px) {
+                width: 60%;
+            }
+        }
+        button {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            width: 80%;
+            height: 100%;
+            border-radius: 5px;
+            border: 2px solid #fff;
+            background: rgba(0, 0, 0, .5);
+            -webkit-transition: background .3s ease-in-out;
+            -moz-transition: background .3s ease-in-out;
+            transition: background .3s ease-in-out;
+            &:hover,
+            &:focus {
+                outline: none;
+                color: white;
+                background: fade(white, 10%);
+            }
+            @media(min-width:768px) {
+                width: auto;
+            }
+        }
     }
     @media(min-width:768px) {
         height: 80%;
-        padding: 0;
+        padding: 100px 0 0 0;
         .intro-body {
             .brand-heading {
                 font-size: 100px;
@@ -306,7 +377,6 @@ a {
 
 .btn {
     text-transform: uppercase;
-    font-family: @font-mono;
     font-weight: 400;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
