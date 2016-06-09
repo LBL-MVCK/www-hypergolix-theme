@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 
 <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Effortless, encrypted IoT development. Open source and end-to-end encrypted. Stop wasting time connecting your device. Focus on code you actually care about.">
+    <meta name="author" content="Muterra, Inc">
+    <link rel="canonical" href="https://www.hypergolix.com">
+  
+    <!-- Start OG -->
+    <meta property="og:title"              content="Hypergolix" />
+    <meta property="og:description"        content="Effortless, encrypted IoT development. Open source and end-to-end encrypted. Stop wasting time connecting your device. Focus on code you actually care about." />
+    <meta property="og:image"              content="https://www.hypergolix.com/img/og-image.jpg" />
+    <meta property="og:url"                content="https://www.hypergolix.com/" />
+    <meta property="og:type"               content="website" />
+    <!-- End OG -->
 
-    <title>hypergolix - effortless encryption for IoT developers</title>
+    <title>Hypergolix - effortless, encrypted IoT development</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/standardize.css" rel="stylesheet">
+    <link href="/css/standardize.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,6 +35,37 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#b31b00">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
 
 </head>
 
@@ -54,7 +94,10 @@
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#download">Download</a>
+                        <a class="page-scroll" href="#demo">Demo</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#team">Team</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -74,13 +117,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">hypergolix</h1>
-                        <p class="intro-text">Effortless encryption<br>for IoT developers.</p>
+                        <h1 class="brand-heading">Hypergolix</h1>
+                        <p class="intro-text">Effortless, encrypted<br>IoT development.</p>
                         <!-- Begin mailchimp form -->
                         <div class="row" id="mailchimpery">
                             <form id="mc-form" action="//hypergolix.us11.list-manage.com/subscribe/post?u=657c50148ecaf8c628e366ecc&amp;id=b9df82ad9a" method="post">
-                                <input class="btn" type="email" id="mce-EMAIL" name="EMAIL" placeholder="email@example.com">
-                                <button class="btn" id="mc-embedded-subscribe" type="submit">I'm interested</button>
+                                <div class="row">
+                                    <input class="btn" type="email" id="mce-EMAIL" name="EMAIL" placeholder="email@example.com">
+                                </div>
+                                <div class="row">
+                                    <button class="btn" id="mc-embedded-subscribe" type="submit">I'm interested</button>
+                                </div>
                                 <div aria-hidden="true" style="height: 0; width: 0; margin: 0; padding: 0; font-size: 0; display: inline; overflow: hidden; position:absolute; left: -9999px;">
                                     <input aria-hidden="true" style="height: 0; width: 0; margin: 0; padding: 0; font-size: 0; display: inline; overflow: hidden; position:absolute; left: -9999px;" type="text" name="b_657c50148ecaf8c628e366ecc_b9df82ad9a" tabindex="-1" value="">
                                 </div>
@@ -88,7 +135,9 @@
                         </div>
                         <!-- End mailchimp form -->
                         <div class="row">
-                            <a href="#about" class="btn page-scroll learnmore">Learn more</a>
+                            <a href="#about" class="btn btn-circle page-scroll learnmore">
+                                <div class="chevrons"></div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -99,75 +148,112 @@
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About Grayscale</h2>
-                <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
-                <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">About Hypergolix</h2>
+                <h3 class="section-subheading">Stop wasting time connecting your device. Focus on code you actually care about.</h3>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4 col-about">
+                <span class="about-badge">
+                    <i class="fa fa-bolt fa-inverse"></i>
+                </span>
+                <h4 class="service-heading">Effortless</h4>
+                <p class="text-muted">Hypergolix runs as a background service on your internet-connected "thing". You connect it with the physical world, and Hypergolix takes care of the rest.</p>
+                <a href="https://github.com/Muterra/py_hypergolix_demos" class="btn btn-default btn-lg">See examples</a>
+            </div>
+            <div class="col-md-4 col-about">
+                <span class="about-badge">
+                    <i class="fa fa-lock fa-inverse"></i>
+                </span>
+                <h4 class="service-heading">Encrypted</h4>
+                <p class="text-muted">Hypergolix encrypts data the moment you create it. Our servers have no access to your information. You control your data — end of story.</p>
+                <a href="https://github.com/Muterra/doc-golix/blob/master/security-whitepaper.md" class="btn btn-default btn-lg">Read the whitepaper</a>
+            </div>
+            <div class="col-md-4 col-about">
+                <span class="about-badge">
+                    <i class="fa fa-rocket fa-inverse"></i>
+                </span>
+                <h4 class="service-heading">Powerful</h4>
+                <p class="text-muted">Hypergolix is scalable and smart. It seamlessly switches between local and global networks, automatically propagating application content.</p>
+                <a href="https://github.com/Muterra/py_hypergolix" class="btn btn-default btn-lg">Learn more</a>
             </div>
         </div>
     </section>
 
-    <!-- Download Section -->
-    <section id="download" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
+    <!-- Demo Section -->
+    <section id="demo" class="content-section text-center">
+        <div class="demo-overlay">
+        </div>
+        <div class="container">
+            <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Download Grayscale</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                    <h2 class="section-heading">Hypergolix demo</h2>
+                    <div class="row">
+                        <div class="video-wrap">
+                            <iframe width="780" height="439" src="https://www.youtube-nocookie.com/embed/GeiQdH8o3Oo?rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Muterra/py_hypergolix_demos" class="btn btn-default btn-lg">See the code</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Start Bootstrap</h2>
-                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
-                </ul>
+    <!-- Team Section -->
+    <section id="team" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About the team</h2>
+                    <p class="light">Hypergolix is a product of <a href="https://www.muterra.io">Muterra, Inc</a>.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"><!-- Find more people, then add here... --></div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="/img/team/badg.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Nick Badger</h4>
+                        <p class="light">Founder</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://twitter.com/nbadg"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/nbadg"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/in/nbadger"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                            <li><a href="https://www.nickbadger.com/"><i class="fa fa-link"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4"><!-- Hire more people, then add here... --></div>
             </div>
         </div>
     </section>
 
-    <!-- Map Section -->
-    <div id="map"></div>
+    <!-- Contact / map Section -->
+    <section id="contact" class="content-section text-center">
+        <div class="contact-overlay">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2 class="section-heading">Contact Hypergolix</h2>
+                    <p>Feel free to email us with any comments, questions, or concerns!</p>
+                    <a href="mailto:badg@muterra.io" class="btn btn-default btn-lg">badg@muterra.io</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>Copyright &copy; Your Website 2014</p>
+            <p>Copyright &copy; 2016 <a href="https://www.muterra.io">Muterra, Inc</a>.</p>
         </div>
     </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
 
 </body>
 

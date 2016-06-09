@@ -1,6 +1,14 @@
-@import (css) url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400italic,700');
+@import (css) url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,700');
+// @import (css) url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400italic,700');
 
 // Variables
+
+@breakpoint-0: 320px;
+@breakpoint-1: 480px;
+@breakpoint-2: 768px;
+@breakpoint-3: 992px;
+@breakpoint-4: 1200px;
+@breakpoint-5: 2000px;
 
 @color-primary-green: rgb(0, 181, 26);
 @color-primary-blue: rgb(0, 107, 179);
@@ -8,15 +16,37 @@
 @color-dark-green: rgb(0, 90, 13);
 @color-dark-blue: rgb(0, 53, 89);
 @color-dark-red: rgb(89, 13, 0);
+@color-grey-dark: #222;
+@color-grey: #777;
+@color-grey-light: #f7f7f7;
+
 @font-mono: 'Roboto Mono', monospace;
 @font-std: 'Roboto', sans-serif;
-@intro-img: '../img/intro-bg.jpg';
+
+@intro-img-0-2: '/img/bg-intro-0-2.jpg';
+@intro-img-2-5: '/img/bg-intro-2-5.jpg';
+@intro-img-5: '/img/bg-intro-5.jpg';
+@contact-img-0-2: '/img/bg-contact-0-2.jpg';
+@contact-img-2-5: '/img/bg-contact-2-5.jpg';
+@contact-img-5: '/img/bg-contact-5.jpg';
+@demo-img-0-2: '/img/bg-demo-0-2.jpg';
+@demo-img-2-5: '/img/bg-demo-2-5.jpg';
+@demo-img-5: '/img/bg-demo-5.jpg';
 
 @bfade-blk: rgba(0, 0, 0, 1);
 @bfade-clr: rgba(0, 0, 0, .75);
 @bfade-fallback: rgba(0, 0, 0, .75);
 
 // Everything else
+
+.text-primary {
+    color: @color-primary-red;
+}
+
+.doubleplusloud {
+    color: @color-primary-red;
+    font-weight: 700;
+}
 
 body {
     width: 100%;
@@ -32,16 +62,19 @@ html {
 }
 
 h1,
-h2,
+h2 {
+    margin: 0 0 15px;
+    text-transform: lowercase;
+    font-family: @font-mono;
+    font-weight: 700;
+}
+
 h3,
 h4,
 h5,
 h6 {
-    margin: 0 0 35px;
-    text-transform: uppercase;
-    font-family: @font-mono;
+    margin: 0 0 15px;
     font-weight: 700;
-    letter-spacing: 1px;
 }
 
 p {
@@ -49,21 +82,26 @@ p {
     font-size: 18px;
     line-height: 1.5;
     @media(min-width:768px) {
-        margin: 0 0 35px;
+        margin: 0 0 25px;
         font-size: 20px;
         line-height: 1.6;
+    }
+    
+    &.light {
+        font-size: 14px;
     }
 }
 
 a {
-    color: @color-primary-green;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+    color: @color-primary-red;
+    // -webkit-transition: all .2s ease-in-out;
+    // -moz-transition: all .2s ease-in-out;
+    // transition: all .2s ease-in-out;
     &:hover,
     &:focus {
         text-decoration: none;
-        color: darken(@color-primary-green,20%);
+        // color: @color-primary-red;
+        color: @color-primary-red;
     }
 }
 
@@ -140,6 +178,20 @@ a {
     }
 }
 
+section {
+    h2.section-heading {
+        font-size: 35px;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    h3.section-subheading {
+        .light;
+        font-size: 16px;
+        text-transform: none;
+        margin-bottom: 75px;
+    }
+}
+
 .intro {
     position: relative; /* Force the overlay to size to this. */
     display: table;
@@ -148,7 +200,7 @@ a {
     padding: 100px 0;
     text-align: center;
     color: white;
-    background: url(@intro-img) no-repeat bottom center scroll;
+    background: url(@intro-img-0-2) no-repeat bottom center scroll;
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -158,39 +210,41 @@ a {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        background: @bfade-fallback; /* For browsers that do not support gradients */
-        background: -webkit-linear-gradient(@bfade-clr,@bfade-clr,@bfade-clr,@bfade-clr,@bfade-blk); /*Safari 5.1-6*/
-        background: -o-linear-gradient(@bfade-clr,@bfade-clr,@bfade-clr,@bfade-clr,@bfade-blk); /*Opera 11.1-12*/
-        background: -moz-linear-gradient(@bfade-clr,@bfade-clr,@bfade-clr,@bfade-clr,@bfade-blk); /*Fx 3.6-15*/
-        background: linear-gradient(@bfade-clr,@bfade-clr,@bfade-clr,@bfade-clr,@bfade-blk); /*Standard*/
+        // width: 100%;
+        // height: 100%;
+        // -webkit-box-sizing: border-box;
+        // -moz-box-sizing: border-box;
+        // box-sizing: border-box;
+        // background: @bfade-fallback; /* For browsers that do not support gradients */
+        // background: -webkit-linear-gradient(@bfade-clr,@bfade-clr,@bfade-clr,@bfade-clr,@bfade-blk); /*Safari 5.1-6*/
+        // background: -o-linear-gradient(@bfade-clr,@bfade-clr,@bfade-clr,@bfade-clr,@bfade-blk); /*Opera 11.1-12*/
+        // background: -moz-linear-gradient(@bfade-clr,@bfade-clr,@bfade-clr,@bfade-clr,@bfade-blk); /*Fx 3.6-15*/
+        // background: linear-gradient(@bfade-clr,@bfade-clr,@bfade-clr,@bfade-clr,@bfade-blk); /*Standard*/
     }
     .intro-body {
         display: table-cell;
         vertical-align: middle;
         .brand-heading {
             font-size: 40px;
-            text-transform: none;
         }
         .intro-text {
             font-size: 18px;
         }
         .learnmore {
             color: white;
-            border: 2px solid white;
+            // border: 2px solid white;
+            border: none;
             margin-top: 10px;
             border-radius: 5px;
             text-transform: none;
+            position: relative;
         }
     }
     #mailchimpery {
-        font-family: @font-mono;
+        // font-family: @font-mono;
         
         input {
+            color: black;
             margin-top: 5px;
             margin-bottom: 5px;
             width: 80%;
@@ -199,16 +253,7 @@ a {
             height: 100%;
             border-radius: 5px;
             border: 2px solid #fff;
-            background: rgba(255, 255, 255, .5);
-            -webkit-transition: background .3s ease-in-out;
-            -moz-transition: background .3s ease-in-out;
-            transition: background .3s ease-in-out;
-            &:hover,
-            &:focus {
-                outline: none;
-                color: white;
-                background: fade(white, 10%);
-            }
+            background: rgba(255, 255, 255, .4);
             
             &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
                 color:    black;
@@ -226,13 +271,14 @@ a {
             }
             
             @media(min-width:768px) {
-                width: 60%;
+                width: 75%;
             }
         }
         button {
+            text-transform: none;
             margin-top: 5px;
             margin-bottom: 5px;
-            width: 80%;
+            width: auto;
             height: 100%;
             border-radius: 5px;
             border: 2px solid #fff;
@@ -246,12 +292,15 @@ a {
                 color: white;
                 background: fade(white, 10%);
             }
-            @media(min-width:768px) {
-                width: auto;
-            }
         }
     }
-    @media(min-width:768px) {
+    @media(min-width: @breakpoint-2) {
+        background: url(@intro-img-2-5) no-repeat bottom center scroll;
+        background-color: black;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
         height: 80%;
         padding: 100px 0 0 0;
         .intro-body {
@@ -263,16 +312,37 @@ a {
             }
         }
     }
+    @media(min-width: @breakpoint-5) {
+        background: url(@intro-img-5) no-repeat bottom center scroll;
+        background-color: black;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+}
+
+.chevrons {
+    background: url('/img/chevrons.svg') no-repeat center bottom;
+    background-size: contain;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    opacity: 0.2;
 }
 
 .btn-circle {
-    width: 70px;
-    height: 70px;
+    text-align: center;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
     margin-top: 15px;
-    padding: 7px 16px;
+    padding: 16px;
     border: 2px solid white;
     border-radius: 100% !important;
-    font-size: 40px;
+    font-size: 15px;
     color: white;
     background: transparent;
     -webkit-transition: background .3s ease-in-out;
@@ -300,6 +370,109 @@ a {
             -moz-animation-iteration-count: infinite;
             -webkit-animation-timing-function: linear;
             -moz-animation-timing-function: linear;
+        }
+    }
+}
+
+// Demo section
+
+.video-wrap {
+    position: relative;
+    padding-bottom: 56.25%; // 16:9 ratio
+    // padding-top: 25px;
+    height: 0;
+    margin-bottom: 15px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    @media(min-width: 1200px) {
+        max-width: 100%;
+    }
+}
+
+// About section
+
+span.about-badge {
+    margin-bottom: 10px;
+    text-align: center;
+    display: inline-block;
+    background-color: @color-grey-dark;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    font-size: 60px;
+    line-height: 100px;
+    color: white;
+    outline: none;
+}
+
+.col-about {
+    margin-bottom: 75px;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+    
+    @media(min-width: 992px) {
+        margin-bottom: 0;
+    }
+}
+
+// Team Section
+
+.img-centered {
+    margin: 0 auto;
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 50px;
+    img {
+        margin: 0 auto;
+        border: 7px solid @color-grey-dark;
+    }
+    h4 {
+        margin-top: 25px;
+        margin-bottom: 0;
+        text-transform: none;
+    }
+    p {
+        margin-top: 0;
+    }
+}
+
+// Social Buttons
+
+ul.social-buttons {
+    margin-bottom: 0;
+    li {
+        a {
+            display: block;
+            background-color: @color-grey-dark;
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            font-size: 20px;
+            line-height: 40px;
+            color: white;
+            outline: none;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: @color-grey;
+            }
         }
     }
 }
@@ -339,45 +512,95 @@ a {
 }
 
 .content-section {
-    padding-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @media(min-width:767px) {
+        padding-top: 125px;
+        padding-bottom: 125px;
+    }
 }
 
-.download-section {
-    width: 100%;
-    padding: 50px 0;
-    color: white;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+#demo {
+    position: relative; /* Force the overlay to size to this. */
+    background: url(@demo-img-0-2) no-repeat center center scroll;
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    .demo-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        // width: 100%;
+        // height: 100%;
+        // -webkit-box-sizing: border-box;
+        // -moz-box-sizing: border-box;
+        // box-sizing: border-box;
+        // background: rgba(0, 0, 0, .85);
+    }
+    
+    @media(min-width: @breakpoint-2) {
+        background: url(@demo-img-2-5) no-repeat center center scroll;
+        background-color: black;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+    @media(min-width: @breakpoint-5) {
+        background: url(@demo-img-5) no-repeat center center scroll;
+        background-color: black;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
 }
 
-#map {
-    width: 100%;
-    height: 200px;
-    margin-top: 100px;
-}
-
-@media(min-width:767px) {
-    .content-section {
-        padding-top: 250px;
+#contact {
+    position: relative; /* Force the overlay to size to this. */
+    background: url(@contact-img-0-2) no-repeat center center scroll;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    .contact-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        // width: 100%;
+        // height: 100%;
+        // -webkit-box-sizing: border-box;
+        // -moz-box-sizing: border-box;
+        // box-sizing: border-box;
+        // background: rgba(0, 0, 0, .85);
     }
-
-    .download-section {
-        padding: 100px 0;
+    
+    @media(min-width: @breakpoint-2) {
+        background: url(@contact-img-2-5) no-repeat center center scroll;
+        background-color: black;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
     }
-
-    #map {
-        height: 400px;
-        margin-top: 250px;
+    @media(min-width: @breakpoint-5) {
+        background: url(@contact-img-5) no-repeat center center scroll;
+        background-color: black;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
     }
 }
 
 .btn {
-    text-transform: uppercase;
-    font-weight: 400;
+    font-family: @font-mono;
+    text-transform: lowercase;
+    font-weight: 700;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
@@ -385,15 +608,15 @@ a {
 }
 
 .btn-default {
-    border: 1px solid @color-primary-green;
-    color: @color-primary-green;
+    border: 1px solid @color-primary-red;
+    color: @color-primary-red;
     background-color: transparent;
     &:hover,
     &:focus {
-        border: 1px solid @color-primary-green;
+        border: 1px solid @color-primary-red;
         outline: none;
         color: black;
-        background-color: @color-primary-green;
+        background-color: @color-primary-red;
     }
 }
 
@@ -418,6 +641,15 @@ footer {
     padding: 50px 0;
     p {
         margin: 0;
+        font-size: 14px;
+        color: @color-grey;
+    }
+    a {
+        color: @color-primary-red;
+        &:hover,
+        &:focus {
+            color: @color-primary-red;
+        }
     }
 }
 
